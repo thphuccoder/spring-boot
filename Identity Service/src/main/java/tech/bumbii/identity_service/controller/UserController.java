@@ -5,7 +5,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
-import tech.bumbii.identity_service.dto.request.ApiResponse;
+import tech.bumbii.identity_service.dto.ApiResponse;
 import tech.bumbii.identity_service.dto.request.UserCreationRequest;
 import tech.bumbii.identity_service.dto.request.UserUpdateRequest;
 import tech.bumbii.identity_service.dto.response.UserResponse;

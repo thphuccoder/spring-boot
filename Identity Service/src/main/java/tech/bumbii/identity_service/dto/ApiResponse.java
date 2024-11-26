@@ -1,4 +1,4 @@
-package tech.bumbii.identity_service.dto.request;
+package tech.bumbii.identity_service.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;

@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import tech.bumbii.identity_service.dto.request.ApiResponse;
+import tech.bumbii.identity_service.dto.ApiResponse;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
