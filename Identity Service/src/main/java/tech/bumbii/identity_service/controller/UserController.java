@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import tech.bumbii.identity_service.dto.request.ApiResponse;
 import tech.bumbii.identity_service.dto.request.UserCreationRequest;
 import tech.bumbii.identity_service.dto.request.UserUpdateRequest;
+import tech.bumbii.identity_service.dto.response.UserResponse;
 import tech.bumbii.identity_service.entity.User;
 import tech.bumbii.identity_service.service.UserService;
 
@@ -30,12 +31,12 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    User getUser(@PathVariable("userId") String userId) {
+    UserResponse getUser(@PathVariable("userId") String userId) {
         return userService.getUser(userId);
     }
 
     @PutMapping("/{userId}")
-    User updateUser(@PathVariable String userId, @RequestBody UserUpdateRequest request) {
+    UserResponse updateUser(@PathVariable String userId, @RequestBody UserUpdateRequest request) {
         return userService.updateUser(userId, request);
     }
 
