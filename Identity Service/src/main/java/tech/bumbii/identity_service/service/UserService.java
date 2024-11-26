@@ -1,5 +1,8 @@
 package tech.bumbii.identity_service.service;
 
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tech.bumbii.identity_service.dto.request.UserCreationRequest;
@@ -14,11 +17,10 @@ import tech.bumbii.identity_service.repository.UserRepository;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserService {
-    @Autowired
     UserRepository userRepository;
-
-    @Autowired
     UserMapper userMapper;
 
     public User createUser(UserCreationRequest request) {

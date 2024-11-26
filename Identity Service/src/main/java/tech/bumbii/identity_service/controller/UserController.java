@@ -1,7 +1,9 @@
 package tech.bumbii.identity_service.controller;
 
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
 import tech.bumbii.identity_service.dto.request.ApiResponse;
 import tech.bumbii.identity_service.dto.request.UserCreationRequest;
@@ -14,9 +16,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/users")
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserController {
-    @Autowired
-    private UserService userService;
+    UserService userService;
 
     @PostMapping
     ApiResponse<User> createUser(@RequestBody @Valid UserCreationRequest request) {
